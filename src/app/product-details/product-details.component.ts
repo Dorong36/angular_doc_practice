@@ -13,9 +13,11 @@ export class ProductDetailsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    // 장바구니 서비스 의존성 주입
     private cartService: CartService
     ) {}
 
+  // addToCart 메서드 추가
   addToCart(product:Product){
     this.cartService.addToCart(product);
     window.alert('Product has been added to the cart!!')

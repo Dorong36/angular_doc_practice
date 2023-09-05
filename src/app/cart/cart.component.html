@@ -1,6 +1,12 @@
 <h3>Cart</h3>
-
+<p>
+  <a routerLink="/shipping">Shipping Prices</a>
+</p>
 <div class="cart-item" *ngFor="let item of items">
   <span>{{ item.name }}</span>
   <span>{{ item.price | currency }}</span>
+  <!-- 
+    * currency pipe
+      => 통화(돈) 형태로 표기
+   -->
 </div>
